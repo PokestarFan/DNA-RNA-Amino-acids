@@ -39,7 +39,7 @@ def rna_to_dna(rna):
 
 
 #opposites
-def opposite_rna(rna):
+def get_amino_acids(rna):
     codons = []
     count = 0
     adder = ''
@@ -64,3 +64,16 @@ def opposite_rna(rna):
 
 
 #the tkinter
+
+def get_text():
+
+
+root = tk.Tk()
+
+en = tk.Entry(root)
+en.pack()
+en.focus_set()
+menu_list = tk.Menu(root, name = 'options')
+menu_list.add_command(label = 'DNA -> RNA', command = dna_to_rna(text))
+menu_list.add_command(label = 'RNA -> DNA', command = rna_to_dna(text))
+menu_list.add_command(label = 'DNA/RNA -> Amino acid', command = get_amino_acids(text))
